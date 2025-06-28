@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Bot, Send, Languages } from 'lucide-react';
 
@@ -62,8 +61,8 @@ const TaxAssistant = () => {
   }, [language]);
 
   const generateTaxAdvice = (income: string, hasInvestments: boolean, hasLoans: boolean) => {
-    const adviceMap: { [key: string]: string } = {
-      'en': {
+    const adviceMap: { [key: string]: { [key: string]: string } } = {
+      en: {
         '1': hasInvestments 
           ? `Great! With income under ₹2.5L, you're in the tax-free zone! 🎉\n\nSince you have investments:\n• Keep investing in PPF (up to ₹1.5L annually)\n• Continue ELSS for tax benefits\n• Your current tax liability: ₹0\n\nTip: Build an emergency fund of 6 months expenses!`
           : `Excellent news! With income under ₹2.5L, you pay ZERO tax! 🎉\n\nRecommendations:\n• Start a PPF account (₹500 minimum)\n• Consider ELSS mutual funds\n• Build emergency savings\n• Your tax liability: ₹0`,
@@ -77,7 +76,7 @@ const TaxAssistant = () => {
           ? `High earner! Income >₹10L = 30% tax bracket.\n\nWith your investments:\n• Maximize 80C: ₹1.5L (save ₹45K)\n• Health insurance: ₹25K (save ₹7.5K)\n• NPS additional: ₹50K (save ₹15K)\n• Home loan interest: Up to ₹2L\n• Total potential savings: ₹67,500+`
           : `High income, high tax! >₹10L = 30% bracket.\n\nUrgent tax planning needed:\n• 80C investments: Save ₹45K annually\n• Health insurance: Save ₹7.5K\n• Consider home loan for interest deduction\n• NPS for extra ₹50K deduction\n• Consult a tax advisor for advanced planning`,
       },
-      'hi': {
+      hi: {
         '1': hasInvestments
           ? `बहुत बढ़िया! ₹2.5L से कम आय पर कोई टैक्स नहीं! 🎉\n\nआपके निवेश के साथ:\n• PPF में निवेश जारी रखें (सालाना ₹1.5L तक)\n• ELSS में निवेश करते रहें\n• आपका टैक्स: ₹0\n\nसुझाव: 6 महीने का इमरजेंसी फंड बनाएं!`
           : `शानदार खबर! ₹2.5L से कम आय पर शून्य टैक्स! 🎉\n\nसिफारिशें:\n• PPF खाता खोलें (न्यूनतम ₹500)\n• ELSS म्यूचुअल फंड में निवेश करें\n• इमरजेंसी बचत बनाएं\n• आपका टैक्स: ₹0`,
@@ -93,7 +92,7 @@ const TaxAssistant = () => {
       }
     };
 
-    return adviceMap[language][income] || 'Please select a valid income range (1-4).';
+    return adviceMap[language]?.[income] || 'Please select a valid income range (1-4).';
   };
 
   const handleSendMessage = () => {
