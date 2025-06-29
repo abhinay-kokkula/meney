@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Bot, Shield, BookOpen, Award } from 'lucide-react';
+import { Bot, Shield, BookOpen, Award, MessageSquare } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Eye-MENEY', path: '/scam-detector', icon: Shield },
     { name: 'MENEYonics', path: '/quiz', icon: BookOpen },
     { name: 'Schemes', path: '/schemes', icon: Award },
+    { name: 'Feedback', path: '/feedback', icon: MessageSquare },
   ];
 
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg"></div>
+            <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
             <span className="text-xl font-bold text-gray-800">MENEY</span>
           </Link>
           

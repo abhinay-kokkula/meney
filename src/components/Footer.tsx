@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Share2, MessageCircle } from 'lucide-react';
+import { Share2, MessageCircle, Heart } from 'lucide-react';
 
 const Footer = () => {
   const shareToWhatsApp = () => {
-    const message = encodeURIComponent("Check out MENEY - Your personal finance toolkit! Get tax advice, detect scams, learn with quizzes, and find government schemes. Visit: " + window.location.origin);
+    const message = encodeURIComponent("Check out MENEY - Finance worth Knowing! Get tax advice, detect scams, learn with quizzes, and find government schemes. Visit: " + window.location.origin);
     window.open(`https://wa.me/?text=${message}`, '_blank');
   };
 
@@ -14,12 +14,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
               <span className="text-xl font-bold">MENEY</span>
             </div>
-            <p className="text-gray-400">
-              Empowering communities with financial literacy and AI-powered tools.
-              Everymen need Money - and we help you manage it better.
+            <p className="text-gray-400 mb-4">
+              Finance worth Knowing - Your friendly guide to better financial decisions. 
+              I'm here to make money matters simple and accessible for everyone!
             </p>
           </div>
           
@@ -30,6 +30,7 @@ const Footer = () => {
               <li><a href="/scam-detector" className="hover:text-white transition-colors">Scam Detector</a></li>
               <li><a href="/quiz" className="hover:text-white transition-colors">Financial Quiz</a></li>
               <li><a href="/schemes" className="hover:text-white transition-colors">Government Schemes</a></li>
+              <li><a href="/feedback" className="hover:text-white transition-colors">Share Feedback</a></li>
             </ul>
           </div>
           
@@ -45,7 +46,7 @@ const Footer = () => {
               </button>
               <button
                 onClick={() => navigator.share && navigator.share({
-                  title: 'MENEY - Financial Toolkit',
+                  title: 'MENEY - Finance worth Knowing',
                   text: 'Check out this amazing financial literacy tool!',
                   url: window.location.origin
                 })}
@@ -59,7 +60,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 MENEY. Building financial awareness for everyone.</p>
+          <p className="flex items-center justify-center space-x-1">
+            <span>©2025 MENEY, made with</span>
+            <Heart className="w-4 h-4 text-red-500 fill-current" />
+            <span>to build financial awareness in everyone.</span>
+          </p>
         </div>
       </div>
     </footer>

@@ -11,6 +11,7 @@ import TaxAssistant from "./pages/TaxAssistant";
 import ScamDetector from "./pages/ScamDetector";
 import FinancialQuiz from "./pages/FinancialQuiz";
 import GovernmentSchemes from "./pages/GovernmentSchemes";
+import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/scam-detector" element={<ScamDetector />} />
               <Route path="/quiz" element={<FinancialQuiz />} />
               <Route path="/schemes" element={<GovernmentSchemes />} />
+              <Route path="/feedback" element={<Feedback />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
