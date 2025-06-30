@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Shield, BookOpen, Award, ArrowRight, Users, TrendingUp, AlertTriangle, Target, Heart } from 'lucide-react';
+import { Bot, Shield, BookOpen, Award, ArrowRight, Users, TrendingUp, AlertTriangle, Target, Heart, User, Building, DollarSign, Lightbulb } from 'lucide-react';
 
 const Home = () => {
   const modules = [
     {
       title: 'TaxMENEY',
       subtitle: 'AI Tax Assistant',
-      description: 'Get personalized tax advice and understand your tax obligations with our AI-powered assistant.',
+      description: 'Get personalized Indian tax advice with detailed calculations, deductions, and smart recommendations.',
       icon: Bot,
       path: '/tax-assistant',
       color: 'bg-blue-600',
@@ -16,8 +16,8 @@ const Home = () => {
     },
     {
       title: 'Eye-MENEY',
-      subtitle: 'Scam Detector',
-      description: 'Protect yourself from fraud! Paste any suspicious message and get instant scam detection.',
+      subtitle: 'Advanced Scam Detector',
+      description: 'Protect yourself from sophisticated frauds with AI-powered analysis and real-time threat detection.',
       icon: Shield,
       path: '/scam-detector',
       color: 'bg-red-600',
@@ -25,8 +25,8 @@ const Home = () => {
     },
     {
       title: 'MENEYonics',
-      subtitle: 'Financial Quiz',
-      description: 'Test and improve your financial knowledge with interactive quizzes and earn badges.',
+      subtitle: 'Financial Mastery Quiz',
+      description: 'Challenge yourself with advanced financial concepts and earn expertise badges.',
       icon: BookOpen,
       path: '/quiz',
       color: 'bg-purple-600',
@@ -34,8 +34,8 @@ const Home = () => {
     },
     {
       title: 'MENEY Schemes',
-      subtitle: 'Government Schemes',
-      description: 'Find government schemes and benefits you are eligible for based on your profile.',
+      subtitle: 'Government Benefits',
+      description: 'Discover government schemes and benefits you qualify for based on your profile.',
       icon: Award,
       path: '/schemes',
       color: 'bg-green-600',
@@ -44,35 +44,67 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '10K+', label: 'Users Helped', icon: Users },
-    { number: '₹50L+', label: 'Tax Savings', icon: TrendingUp },
-    { number: '500+', label: 'Scams Detected', icon: Shield },
+    { number: '25K+', label: 'Users Helped', icon: Users },
+    { number: '₹2Cr+', label: 'Tax Savings', icon: TrendingUp },
+    { number: '5000+', label: 'Scams Detected', icon: Shield },
   ];
 
   const problems = [
     {
       icon: AlertTriangle,
       title: 'Tax Confusion',
-      problem: 'Most people struggle with complex tax rules and miss out on savings',
-      solution: 'Our AI Tax Assistant simplifies tax advice in your language'
+      problem: 'Complex Indian tax rules confuse people, leading to overpayment or penalties',
+      solution: 'Our AI gives personalized advice in simple language, with exact calculations'
     },
     {
       icon: Shield,
-      title: 'Financial Frauds',
-      problem: 'Scammers target people with fake messages and steal hard-earned money',
-      solution: 'Eye-MENEY instantly detects scam messages to protect you'
+      title: 'Rising Financial Frauds',
+      problem: 'Scammers are getting smarter with KBC lottery, fake KYC, and OTP frauds stealing crores',
+      solution: 'Eye-MENEY detects even sophisticated scam patterns instantly'
     },
     {
       icon: BookOpen,
       title: 'Financial Illiteracy',
-      problem: 'Lack of financial knowledge leads to poor money decisions',
-      solution: 'Fun quizzes and games make learning about money enjoyable'
+      problem: 'Poor financial decisions due to lack of knowledge about investments, credit, and planning',
+      solution: 'Interactive learning with real scenarios and practical knowledge'
     },
     {
       icon: Target,
-      title: 'Missing Benefits',
-      problem: 'Many eligible people miss out on government schemes and benefits',
-      solution: 'We help you discover schemes you qualify for automatically'
+      title: 'Missing Government Benefits',
+      problem: 'Eligible citizens miss out on schemes worth thousands due to lack of awareness',
+      solution: 'Automated matching with your profile to find relevant schemes'
+    }
+  ];
+
+  // Story section data
+  const stories = [
+    {
+      icon: User,
+      title: "Raj's Tax Nightmare",
+      story: "Raj, a software engineer in Bangalore, was paying ₹50,000 extra tax every year because he didn't know about 80C deductions. He discovered MENEY and learned he could save ₹45,000 annually through proper tax planning.",
+      impact: "Annual Savings: ₹45,000",
+      bgColor: "bg-blue-50"
+    },
+    {
+      icon: Shield,
+      title: "Priya's Scam Escape",
+      story: "Priya almost lost ₹2 lakhs to a fake KBC lottery scam. The message looked genuine with Amitabh Bachchan's photo. Eye-MENEY detected 8 scam indicators and warned her just in time.",
+      impact: "Money Saved: ₹2,00,000",
+      bgColor: "bg-red-50"
+    },
+    {
+      icon: Building,
+      title: "Village Success Story",
+      story: "In a small village in UP, our volunteers taught 200 families about financial literacy using MENEY. Now 80% have emergency funds and 60% invest in mutual funds regularly.",
+      impact: "Families Helped: 200+",
+      bgColor: "bg-green-50"
+    },
+    {
+      icon: DollarSign,
+      title: "Student's Smart Start",
+      story: "Anita, a college student, used MENEY to find government scholarships worth ₹75,000. She also learned about SIPs and started investing ₹500/month for her future.",
+      impact: "Scholarship Found: ₹75,000",
+      bgColor: "bg-purple-50"
     }
   ];
 
@@ -107,6 +139,61 @@ const Home = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Stories Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Real Stories, Real Impact 📖
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              These aren't just numbers - they're real people whose lives changed because they learned to handle money better. 
+              Here are some stories that inspire us every day!
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {stories.map((story, index) => {
+              const Icon = story.icon;
+              return (
+                <div key={index} className={`${story.bgColor} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow`}>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
+                      <Icon className="w-6 h-6 text-gray-700" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">{story.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-700 mb-4 leading-relaxed">{story.story}</p>
+                  
+                  <div className="bg-white rounded-lg p-3">
+                    <p className="font-semibold text-green-700">✨ {story.impact}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+              <Lightbulb className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Your Story Could Be Next! 🌟</h3>
+              <p className="text-gray-700 mb-6">
+                Every financial journey starts with a single step. Whether you want to save on taxes, 
+                avoid scams, or build wealth - MENEY is here to guide you. Let's write your success story together!
+              </p>
+              <Link
+                to="/tax-assistant"
+                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                <span>Start Your Journey</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

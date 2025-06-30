@@ -59,12 +59,21 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p className="flex items-center justify-center space-x-1">
-            <span>©2025 MENEY, made with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>to build financial awareness in everyone.</span>
-          </p>
+        {/* Creator Credits */}
+        <div className="border-t border-gray-800 mt-8 pt-6">
+          <div className="text-center text-gray-400 mb-4">
+            <p className="text-sm">
+              Created by <span className="text-white font-semibold">Abhinay Kokkula</span> & <span className="text-white font-semibold">Shiva Kumar Vemula</span> for <span className="text-blue-400 font-semibold">HACKONOMICS 25</span>
+            </p>
+          </div>
+          
+          <div className="text-center text-gray-400">
+            <p className="flex items-center justify-center space-x-1">
+              <span>©2025 MENEY, made with</span>
+              <Heart className="w-4 h-4 text-red-500 fill-current" />
+              <span>to build financial awareness in everyone.</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
