@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Share2, MessageCircle, Heart } from 'lucide-react';
 
@@ -14,7 +13,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg"></div>
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">M</span>
+              </div>
               <span className="text-xl font-bold">MENEY</span>
             </div>
             <p className="text-gray-400 mb-4">
